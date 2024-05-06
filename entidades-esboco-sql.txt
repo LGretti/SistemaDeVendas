@@ -1,0 +1,17 @@
+---Software de Controle de Estoque e Vendas
+
+Pessoas - Dados de Pessoas
+ID_Pessoa   int PK
+Nome        varchar(80) not null
+CPF_CNPJ    varchar(14) not null
+Natureza    bit --0 - F | 1 - J  --fk para existir na 
+ID_Endereco int FK_Enderecos
+
+Pessoas_Fisicas - Dados de Pessoas Físicas
+Documento       varchar(30) not null
+IDTipoDocumento Int FK_TiposDocumento
+
+Pessoas_Juridicas - Dados de Pessoas Jurídicas
+CNAE      varchar(50)
+ID_Pessoa int FK_Pessoas
+
